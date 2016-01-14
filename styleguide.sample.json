@@ -1,0 +1,38 @@
+{
+	"path": {
+		"resources": "/path/to/resources",
+		"templates": "/path/to/templates"
+	},
+	"styleguideTitle": "optional title",
+	"styleguideDescription": "<p>optional descripton</p>",
+	"sandboxCSS": "body{background:#fff;}",
+	"exclude": {
+		"all": false,
+		"files": [
+			"/path/to/templates/foo.html",
+			"/path/to/templates/bar.html"
+		],
+		"folders": [
+			"/path/to/templates/ignore"
+		]
+	},
+	"include": {
+		"files": [
+			"/path/to/templates/foo.html",
+			"/path/to/templates/bar.html"
+		],
+		"folders": [
+			"/path/to/templates/folder"
+		]
+	},
+	"components": [
+		{
+			"id": "component-id",
+			"title": "title for display",
+			"description": "description for display",
+			"data": {
+				"title": "data to use"
+			}
+		}
+	]
+}

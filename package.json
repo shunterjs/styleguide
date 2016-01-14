@@ -1,0 +1,27 @@
+{
+  "name": "shunter-styleguide",
+  "description": "Living Styleguide module for Shunter",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "https://github.com/nature/shunter-styleguide#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nature/shunter-styleguide.git"
+  },
+  "bin": {
+    "shunter-styleguide": "./bin/styleguide.js"
+  },
+  "dependencies": {
+    "cssstats": "1.2.1",
+    "dustjs-helpers": "~1.7",
+    "dustjs-linkedin": "~2.7",
+    "extend": "^3.0.0",
+    "filewalker": "^0.1.2",
+    "formattor": "0.0.2",
+    "fs-extra": "^0.26.3",
+    "winston": "^2.1.1",
+    "yargs": "^3.31.0"
+  },
+  "devDependencies": {},
+  "scripts": {}
+}

@@ -1,0 +1,41 @@
+
+<section class="jump-section" id="colors">
+	<h1>Colors</h1>
+	<div class="mb48">
+		<div class="title cleared">
+			<svg height="34" viewBox="0 0 24 24" width="24">
+				<path d="M0 0h24v24H0z" fill="none"></path>
+				<path d="M3 15h18v-2H3v2zm0 4h18v-2H3v2zm0-8h18V9H3v2zm0-6v2h18V5H3z"></path>
+			</svg>
+			<h2>{@gt key=stats.color.length value=1}Text Colors ({stats.color.length}){:else}Text Color{/gt}</h2>
+		</div>
+		<div class="color-wrapper cleared">
+			{?stats.color}
+				{#stats.color}
+					<div class="text-color{?white} text-white{/white}">
+						<h2 style="color:{value};">Aa</h2>
+						<p style="color:{value};">{value}</p>
+					</div>
+				{/stats.color}
+			{/stats.color}
+		</div>
+	</div>
+	<div class="mb48">
+		<div class="title cleared">
+			<svg height="34" viewBox="0 0 24 24" width="24">
+				<path d="M0 0h24v24H0z" fill="none"></path>
+				<path d="M3 15h18v-2H3v2zm0 4h18v-2H3v2zm0-8h18V9H3v2zm0-6v2h18V5H3z"></path>
+			</svg>
+			<h2>{@gt key=stats.backgroundColor.length value=1}Background Colors ({stats.backgroundColor.length}){:else}Background Color{/gt}</h2>
+		</div>
+		<div class="color-wrapper cleared">
+			{?stats.backgroundColor}
+				{#stats.backgroundColor}
+					<div class="color-block" style="background-color:{value}">
+						<span>{value}</span>
+					</div>
+				{/stats.backgroundColor}
+			{/stats.backgroundColor}
+		</div>
+	</div>
+</section>

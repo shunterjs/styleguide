@@ -1,0 +1,38 @@
+
+{?components}
+	<section id="components">
+		<h1>Components</h1>
+		{#components}
+			<div id="{id}" class="jump-section mb48 cleared">
+				<div class="title cleared">
+					<svg height="34" width="24" viewBox="0 0 24 24">
+						<path d="M0 0h24v24H0V0z" fill="none"></path>
+						<path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"></path>
+					</svg>
+					{?title}<h2>{title}</h2>{/title}
+				</div>
+				<div class="copy">
+					{?description}{description|s}{/description}
+				</div>
+
+				<div class="cleared">
+					<div class="example">
+						<div class="cleared">
+							<iframe sandbox="allow-same-origin allow-scripts allow-popups allow-forms" srcdoc="&#60;html lang=&quot;en&quot;&#62;&#60;head&#62;&#60;meta charset=&quot;utf-8&quot;&#62;&#60;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&#62;&#60;title&#62;Component Preview&#60;/title&#62;&#60;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&#62;&#60;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;{@assetPath src=applicationCSS /}&quot;&#62;{?sandboxCSS}&#60;style&#62;{sandboxCSS}&#60;/style&#62;{/sandboxCSS}&#60;/head&#62;&#60;body&#62;{code|iframe|s}&#60;/body&#62;&#60;/html&#62;"></iframe>
+						</div>
+					</div>
+				</div>
+
+				{! code snippet !}
+				<div class="cleared">
+					<div class="code">
+						<pre><code class="language-markup">
+							{prettyCode}
+						</code></pre>
+					</div>
+				</div>
+			</div>
+		{/components}
+	</section>
+{/components}
+

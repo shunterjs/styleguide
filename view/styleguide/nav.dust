@@ -1,0 +1,17 @@
+
+<ul class="cleared">
+	<li><a href="#about">About</a></li>
+	<li><a href="#typography">Typography</a></li>
+	<li><a href="#colors">Colors</a></li>
+	{#sections}
+		<li><a href="#{id}">{title}</a></li>
+	{/sections}
+	{?components}
+		<li><h2>Components</h2>
+		<ul>
+			{#components}
+				<li><a href="#{id}">{title}</a></li>
+			{/components}
+		</ul></li>
+	{/components}
+</ul>

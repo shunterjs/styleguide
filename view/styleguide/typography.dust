@@ -1,0 +1,24 @@
+
+<section class="jump-section" id="typography">
+	<h1>Typography</h1>
+	<div class="title cleared">
+		<svg height="34" viewBox="0 0 24 24" width="24">
+			<path d="M0 0h24v24H0z" fill="none"></path>
+			<path d="M3 15h18v-2H3v2zm0 4h18v-2H3v2zm0-8h18V9H3v2zm0-6v2h18V5H3z"></path>
+		</svg>
+		<h2>{@gt key=stats.fontFamily.length value=1}Font Families ({stats.fontFamily.length}){:else}Font Family{/gt}</h2>
+	</div>
+	<div class="cleared mb48">
+		<iframe sandbox="allow-same-origin allow-scripts allow-popups allow-forms" srcdoc="&#60;html lang=&quot;en&quot;&#62;&#60;head&#62;&#60;meta charset=&quot;utf-8&quot;&#62;&#60;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&#62;&#60;title&#62;Component Preview&#60;/title&#62;&#60;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&#62;&#60;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;{@assetPath src=applicationCSS /}&quot;&#62;{?sandboxCSS}&#60;style&#62;{sandboxCSS}h3{font-size:24px;line-height:1.6;color:#333;}&#60;/style&#62;{/sandboxCSS}&#60;/head&#62;&#60;body&#62;{?stats.fontFamily}{#stats.fontFamily}<h3 style=&quot;font-family:{value}&quot;>{value}</h3>{/stats.fontFamily}{/stats.fontFamily}&#60;/body&#62;&#60;/html&#62;"></iframe>
+	</div>
+	<div class="title cleared">
+		<svg height="34" viewBox="0 0 24 24" width="24">
+			<path d="M0 0h24v24H0z" fill="none"></path>
+			<path d="M3 15h18v-2H3v2zm0 4h18v-2H3v2zm0-8h18V9H3v2zm0-6v2h18V5H3z"></path>
+		</svg>
+		<h2>{@gt key=stats.fontSize.length value=1}Font Sizes ({stats.fontSize.length}){:else}Font Size{/gt}</h2>
+	</div>
+	<div class="cleared mb48">
+		<iframe sandbox="allow-same-origin allow-scripts allow-popups allow-forms" srcdoc="&#60;html lang=&quot;en&quot;&#62;&#60;head&#62;&#60;meta charset=&quot;utf-8&quot;&#62;&#60;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&#62;&#60;title&#62;Component Preview&#60;/title&#62;&#60;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&#62;&#60;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;{@assetPath src=applicationCSS /}&quot;&#62;{?sandboxCSS}&#60;style&#62;{sandboxCSS}.styleguide__table,.styleguide__table td, .styleguide__table tr{background:#fff;border:none;vertical-align: middle;}.styleguide__table{width:100%;border-collapse:collapse;table-layout:fixed;white-space:nowrap;}.styleguide__table td{padding:10px 0;border-bottom:1px dashed #e5e5e5;overflow:hidden;text-overflow:ellipsis;}.styleguide__table td:nth-of-type(1){font-weight:bold;font-style:italic;width:100px;}.styleguide__table td:nth-of-type(2){padding-left:20px;width:calc(100% - 120px);}&#60;/style&#62;{/sandboxCSS}&#60;/head&#62;&#60;body&#62;{?stats.fontSize}<table class=&quot;styleguide__table&quot;>{#stats.fontSize}<tr><td>{value}</td><td style=&quot;font-size:{value};line-height:1;&quot;>The quick brown fox</td></tr>{/stats.fontSize}</table>{/stats.fontSize}&#60;/body&#62;&#60;/html&#62;"></iframe>
+	</div>
+</section>
