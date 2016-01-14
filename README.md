@@ -1,4 +1,4 @@
-# styleguide
+# Styleguide
 A Living Styleguide Module for your Shunter Application
 
 Set-up Steps
