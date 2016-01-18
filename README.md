@@ -239,4 +239,24 @@ Each component needs to have an `ID` that matches value that you replaced the pl
 
 ## Building The Styleguide
 
+Once you have marked up your components and set up your configuration file, you can build your styleguide. From the root of your Application run:
+
+```
+./node_modules/.bin/shunter-styleguide --c=config/styleguide.json
+```
+
+This will build the styleguide using the config found at `config/styleguide.json`. This process creates a `data/styleguide.json` file within the styleguide module that contains all data for the styleguide. An input filter then populates your template with this data if the JSON page request matches the following:
+
+```js
+{
+	layout: {
+		template: 'styleguide__layout'
+	}
+}
+```
+
+This looks for the `layout.dust` template within the `styleguide` namespace.
+
 ### Build Options
+
+## Serving up the styleguide
