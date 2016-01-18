@@ -259,4 +259,55 @@ This looks for the `layout.dust` template within the `styleguide` namespace.
 
 ### Build Options
 
+There are a number of configuration options you can pass when building:
+
+##### `--c`
+**config** Shown in the above example, this specifies the location of your config file. If nothing is passed the default config settings are used
+
+##### `--v`
+**verbose** Verbose output when logging to the command line if set to `true`. Defaults to `false`
+
+##### `--d`
+**data** Specify a location to save a sample data file. This will allow you to work on the styleguide locally
+
+##### `--s`
+**stylesheet** Specify your own CSS file for the styleguide. Will overwrite the one within this module
+
+##### `--j`
+**javascript** Specify your own Javascript file for the styleguide. Will overwrite the one within this module
+
+Example of all the options:
+
+```
+./node_modules/.bin/shunter-styleguide --c=config/styleguide.json --v=true --d=data/styleguide --s=resources/css/styleguide.css --j=resources/js/styleguide.js
+```
+
 ## Serving up the styleguide
+
+In order to serve the styleguide on your website you will need to set up a [route in your application](https://github.com/nature/shunter/blob/master/docs/usage/routing.md#examples). Something like:
+
+```js
+{
+    "www.example.com": {
+        "/^\\/styleguide/": {
+            "host": "styleguide.example.com",
+            "port": 80
+        }
+    }
+}
+```
+
+This should then be set up to return JSON in the following format:
+
+```js
+{
+	layout: {
+		template: 'styleguide__layout'
+	}
+}
+```
+
+## License
+
+Styleguide is licensed under the [Lesser General Public License (LGPL-3.0)][LICENSE].  
+Copyright &copy; 2016, ShunterJS
