@@ -13,7 +13,7 @@ module.exports = function(config, configFile) {
 	var defaultConfig = {
 		path: {
 			templates: path.join(appRoot, 'view'),
-			resources: path.join(appRoot, 'resources'),
+			resources: path.join(appRoot, 'resources')
 		},
 		exclude: {
 			all: false,
@@ -41,4 +41,3 @@ module.exports = function(config, configFile) {
 	}
 	return config;
 };
-
