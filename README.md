@@ -1,5 +1,6 @@
 # Styleguide
-A Living Styleguide Module for your Shunter Application
+
+A Living Styleguide Module for your Shunter Application. Mark up components within your templates and render them as a Living Styleguide that will use the assets from your application to always show a guide to the latest version of your website. The module will also use your CSS to auto-generate sections for Typography and Colors.
 
 ## Table Of Contents
 
@@ -13,6 +14,10 @@ A Living Styleguide Module for your Shunter Application
         * [components, componentStart, componentEnd, placeholderText](#components-componentstart-componentend-placeholdertext)
         * [css](#css)
 	* [Optional Configuration Options](#optional-configuration-options)
+	    * [styleguideTitle](#styleguidetitle)
+	    * [styleguideDescription](#styleguidedescription)
+	    * [sandboxCSS](#sandboxcss)
+	    * [sections](#sections)
 * [Adding Components](#adding-components)
     * [Marking Up The Templates](#marking-up-the-templates)
     * [Adding Component Data](#adding-component-data)
@@ -119,12 +124,54 @@ include {
 In this example the two template files will be included, as will all templates in the two folders specified.
 
 #### components, componentStart, componentEnd, placeholderText
-These deal with marking up components and the data that goes with them. This is covered in the section "Adding Components"
+These deal with marking up components and the data that goes with them. This is covered in the section [Adding Components](#adding-components).
 
 #### css
 This is the name of your CSS file without the extension or the fingerprint. e.g for the file `main-7ea4e129e237c230ca7de77c1b47d2f4.css` you would use `main`. This is used to generate information about your stylesheet, and also in the display of your components.
 
 ### Optional Configuration Options
+
+#### styleguideTitle
+Give your styleguide a title. Defaults to 'Styleguide'. Takes HTML markup.
+
+#### styleguideDescription
+A description to go underneath the main title. Takes HTML markup.
+
+#### sandboxCSS
+Components in the styleguide are sandboxed within an iframe that includes your app CSS. If you want to add additional CSS, add it here. For example, if you want to remove margin/padding from the body of the iframe you can.
+
+#### sections
+Add custom sections to the styleguide using the following markup:
+
+```js
+sections: [
+	{
+	    id: 'section-id',
+	    title: 'Title For Your Section',
+	    items: [
+	        {
+	            title: 'Optional Item Title',
+	            html: '<p>Some html to include</p><p>another paragraph</p>'
+	        },
+	        {
+	            html: '<div class="grid-item"><span class="styleguide_item">text</span></div>',
+	            sandboxed: true,
+				snippetCode: '<div class="grid-item">text</div>',
+	            snippet: true,
+	            css: '.styleguide_item{padding:10px;}',
+	            language: 'markup'
+	        }
+	    ]
+	}
+]
+```
+
+All sections must contain a unique `id`, a `title`, and one or more `items`. Each item can have an optional `title` (which will appear as a sub-heading) and some `html` to print out. Items can also contain the following:  
+`sandboxed` - if this is `true` then the code in `html` will be sandboxed inside an iframe with your application CSS.  
+`snippetCode` - use this if you want to show the code but tweak it from what is in `html`.  
+`snippet` - if this is `true` then the the code from `snippetCode` (or `html` if not provided) with be displayed.  
+`css` - any additional css to be be passed to the iframe for sandboxed items.  
+`language` - if using snippets you can specify the language, deaults to `markup` (html).  
 
 ## Adding Components
 
