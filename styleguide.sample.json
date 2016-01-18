@@ -6,6 +6,7 @@
 	"styleguideTitle": "optional title",
 	"styleguideDescription": "<p>optional descripton</p>",
 	"sandboxCSS": "body{background:#fff;}",
+	"applicationCSS": "main",
 	"exclude": {
 		"all": false,
 		"files": [

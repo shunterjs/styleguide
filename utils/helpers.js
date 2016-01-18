@@ -7,6 +7,7 @@ module.exports = function (config) {
 
 	var components = {};
 	var customOptions = [
+		'applicationCSS',
 		'styleguideCSS',
 		'styleguideJS',
 		'styleguideTitle',

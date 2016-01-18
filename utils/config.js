@@ -28,7 +28,7 @@ module.exports = function(config, configFile) {
 		componentStart: '{! componentStart-placeholder !}',
 		componentEnd: '{! componentEnd !}',
 		placeholderText: 'placeholder',
-		css: 'main'
+		applicationCSS: 'main'
 	};
 
 	config = extend(true, {}, defaultConfig, config);

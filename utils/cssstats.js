@@ -9,7 +9,7 @@ module.exports = function(config) {
 
 	var logger = require('./logger');
 
-	var regex = new RegExp('^' + config.css + '-[a-f0-9]{32}(\.css)$');
+	var regex = new RegExp('^' + config.applicationCSS + '-[a-f0-9]{32}(\.css)$');
 	var	fullPath = [];
 
 	// returns true if color is equivelent to white

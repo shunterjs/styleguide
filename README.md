@@ -12,7 +12,7 @@ A Living Styleguide Module for your Shunter Application. Mark up components (cod
         * [exclude](#exclude)
         * [include](#include)
         * [components, componentStart, componentEnd, placeholderText](#components-componentstart-componentend-placeholdertext)
-        * [css](#css)
+        * [applicationCSS](#applicationCSS)
 	* [Optional Configuration Options](#optional-configuration-options)
 	    * [styleguideTitle](#styleguidetitle)
 	    * [styleguideDescription](#styleguidedescription)
@@ -125,8 +125,8 @@ In this example the two template files will be included, as will all templates i
 #### components, componentStart, componentEnd, placeholderText
 These deal with marking up components and the data that goes with them. This is covered in the section [Adding Components](#adding-components).
 
-#### css
-This is the name of your CSS file without the extension or the fingerprint. e.g for the file `main-7ea4e129e237c230ca7de77c1b47d2f4.css` you would use `main`. This is used to generate information about your stylesheet, and also in the display of your components.
+#### applicationCSS
+This is the name of your application CSS file without the extension or the fingerprint. e.g for the file `main-7ea4e129e237c230ca7de77c1b47d2f4.css` you would use `main`. This is used to generate information about your stylesheet, and also in the display of your components.
 
 ### Optional Configuration Options
 

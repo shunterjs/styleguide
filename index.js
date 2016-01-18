@@ -17,8 +17,7 @@ module.exports = function (configObj, file) {
 	var dataTemplate = {
 		layout: {
 			template: 'styleguide__layout'
-		},
-		applicationCSS: config.css + '.css'
+		}
 	};
 	var styleguideData = {
 		components: config.components
