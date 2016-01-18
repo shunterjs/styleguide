@@ -1,6 +1,6 @@
 # Styleguide
 
-A Living Styleguide Module for your Shunter Application. Mark up components within your templates and render them as a Living Styleguide that will use the assets from your application to always show a guide to the latest version of your website. The module will also use your CSS to auto-generate sections for Typography and Colors.
+A Living Styleguide Module for your Shunter Application. Mark up components (code snippets) within your templates and render them as a Living Styleguide that will use the assets from your application to always show a guide to the latest version of your website. The module will also use your CSS to auto-generate sections for Typography and Colors.
 
 ## Table Of Contents
 
@@ -19,9 +19,6 @@ A Living Styleguide Module for your Shunter Application. Mark up components with
 	    * [sandboxCSS](#sandboxcss)
 	    * [sections](#sections)
 * [Adding Components](#adding-components)
-    * [Marking Up The Templates](#marking-up-the-templates)
-    * [Adding Component Data](#adding-component-data)
-* [Adding Custom Sections](#adding-custom-sections)
 * [Building The Styleguide](#building-the-styleguide)
     * [Build Options](#build-options)
 
@@ -185,23 +182,60 @@ sections: [
 ```
 
 All sections must contain a unique `id`, a `title`, and one or more `items`. Each item can have an optional `title` (which will appear as a sub-heading) and some `html` to print out. Items can also contain the following:  
-`sandboxed` - if this is `true` then the code in `html` will be sandboxed inside an iframe with your application CSS.  
-`snippetCode` - use this if you want to show the code but tweak it from what is in `html`.  
-`snippet` - if this is `true` then the the code from `snippetCode` (or `html` if not provided) with be displayed.  
-`css` - any additional css to be be passed to the iframe for sandboxed items.  
-`language` - if using snippets you can specify the language, deaults to `markup` (html).
+
+##### `sandboxed`
+if this is `true` then the code in `html` will be sandboxed inside an iframe with your application CSS.
+
+##### `snippetCode`
+use this if you want to show the code but tweak it from what is in `html`.  
+
+##### `snippet`
+if this is `true` then the the code from `snippetCode` (or `html` if not provided) with be displayed.  
+
+##### `css`
+any additional css to be be passed to the iframe for sandboxed items.  
+
+##### `language`
+if using snippets you can specify the language, deaults to `markup` (html).
 
 > You can see an example of the default and optional configurations by looking at the [Sample JSON](styleguide.sample.json) file.
 
 ## Adding Components
 
-The main aim of the Living Styleguide
+The main aim of the Living Styleguide is to display the latest version of components from your website. You add components by wrapping your code in specific Dust comments. The format of these can be set in your config file, but by default they look like this:
 
-### Marking Up The Templates
+```js
+{
+	componentStart: '{! componentStart-placeholder !}',
+	componentEnd: '{! componentEnd !}',
+	placeholderText: 'placeholder'
+}
+```
 
-### Adding Component Data
+Find the code snippet you wish to display within your template and wrap it with the `componentStart` and `componentEnd` tags. Make sure that in your config the value for `placeholderText` matches the text in `componentStart`. Then simply replace the word placeholder with a unique ID for your component. This might look something like this:
 
-## Adding Custom Sections
+```html
+{! componentStart-button !}
+	<button type="button" class="default-button">{text}</button>
+{! componentEnd !}
+```
+
+You now need to add some metadata and data about the component in the components section of your config. For the above example this might look something like:
+
+```js
+components: [
+	{
+		id: 'button',
+		title: 'Default Button',
+		description: '<p>This is a default button</p>',
+		data: {
+			text: 'Click Me!'
+		}
+	}
+]
+```
+
+Each component needs to have an `ID` that matches value that you replaced the placeholder text with. You should also provide a `title` (HTML) and `description` (HTML) that will display alongside your component. If your component requires JSON data this should be provided within a `data` object. 
 
 ## Building The Styleguide
 
