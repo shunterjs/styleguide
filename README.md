@@ -75,7 +75,7 @@ In order to build the styleguide you need to create a configuration file, e.g. `
 
 ### Default Configuration Options
 
-You can overwrite the default options in your configuration file.
+You can overwrite the default options in your configuration file:
 
 #### path.templates
 This should be the location of your template (`.dust`) files. Within these templates you will specify your components.
@@ -134,11 +134,29 @@ This is the name of your CSS file without the extension or the fingerprint. e.g 
 #### styleguideTitle
 Give your styleguide a title. Defaults to 'Styleguide'. Takes HTML markup.
 
+```js
+{
+	styleguideTitle: 'optional <em>title</em> here'
+}
+```
+
 #### styleguideDescription
 A description to go underneath the main title. Takes HTML markup.
 
+```js
+{
+	styleguideDescription: '<p>optional descripton</p>'
+}
+```
+
 #### sandboxCSS
 Components in the styleguide are sandboxed within an iframe that includes your app CSS. If you want to add additional CSS, add it here. For example, if you want to remove margin/padding from the body of the iframe you can.
+
+```js
+{
+	sandboxCSS: 'body{background:#fff;}'
+}
+```
 
 #### sections
 Add custom sections to the styleguide using the following markup:
@@ -171,7 +189,9 @@ All sections must contain a unique `id`, a `title`, and one or more `items`. Eac
 `snippetCode` - use this if you want to show the code but tweak it from what is in `html`.  
 `snippet` - if this is `true` then the the code from `snippetCode` (or `html` if not provided) with be displayed.  
 `css` - any additional css to be be passed to the iframe for sandboxed items.  
-`language` - if using snippets you can specify the language, deaults to `markup` (html).  
+`language` - if using snippets you can specify the language, deaults to `markup` (html).
+
+> You can see an example of the default and optional configurations by looking at the [Sample JSON](styleguide.sample.json) file.
 
 ## Adding Components
 

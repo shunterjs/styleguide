@@ -34,5 +34,25 @@
 				"title": "data to use"
 			}
 		}
+	],
+	"sections": [
+		{
+		    "id": "section-id",
+		    "title": "title for your section",
+		    "items": [
+		        {
+		            "title": "optional item title",
+		            "html": "<p>Some html to include</p><p>another paragraph</p>"
+		        },
+		        {
+		            "html": "<div class=\"grid-item\"><span class=\"styleguide_item\">text</span></div>",
+		            "sandboxed": true,
+					"snippetCode": "<div class=\"grid-item\">text</div>",
+		            "snippet": true,
+		            "css": ".styleguide_item{padding:10px;}",
+		            "language": "markup"
+		        }
+		    ]
+		}
 	]
 }
