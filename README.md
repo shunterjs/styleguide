@@ -45,7 +45,7 @@ Run `npm install` from your application to add in the code
 
 ## Configuration
 
-In order to build the styleguide you need to create a configuration file, e.g. `config/styleguide.json`. By default you get the following settings
+In order to build the styleguide you need to create a configuration file, e.g. `config/styleguide.json`. By default (without creating a config file) you get the following settings:
 
 ```js
 {
@@ -69,6 +69,8 @@ In order to build the styleguide you need to create a configuration file, e.g. `
 	css: 'main'
 }
 ```
+
+> You can see an example of the default and optional configurations by looking at the [Sample JSON](styleguide.sample.json) file.
 
 ### Default Configuration Options
 
@@ -198,8 +200,6 @@ any additional css to be be passed to the iframe for sandboxed items.
 ##### `language`
 if using snippets you can specify the language, deaults to `markup` (html).
 
-> You can see an example of the default and optional configurations by looking at the [Sample JSON](styleguide.sample.json) file.
-
 ## Adding Components
 
 The main aim of the Living Styleguide is to display the latest version of components from your website. You add components by wrapping your code in specific Dust comments. The format of these can be set in your config file, but by default they look like this:
@@ -235,7 +235,7 @@ components: [
 ]
 ```
 
-Each component needs to have an `ID` that matches value that you replaced the placeholder text with. You should also provide a `title` (HTML) and `description` (HTML) that will display alongside your component. If your component requires JSON data this should be provided within a `data` object. 
+Each component needs to have an `ID` that matches value that you replaced the placeholder text with. You should also provide a `title` (HTML) and `description` (HTML) that will display alongside your component. If your component requires JSON data this should be provided within a `data` object.
 
 ## Building The Styleguide
 
