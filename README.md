@@ -1,6 +1,25 @@
 # Styleguide
 A Living Styleguide Module for your Shunter Application
 
+## Table Of Contents
+
+* [Set-up Steps](#set-up-steps)
+* [Configuration](#configuration)
+    * [Default Configuration Options](#default-configuration-options)
+        * [path.templates](#path.templates)
+        * [path.resources](#path.resources)
+        * [exclude](#exclude)
+        * [include](#include)
+        * [components, componentStart, componentEnd, placeholderText](#components,-componentstart,-componentend,-placeholdertext)
+        * [css](#css)
+	* [Optional Configuration Options](#optional-configuration-options)
+* [Adding Components](#adding-components)
+    * [Marking Up The Templates](#marking-up-the-templates)
+    * [Adding Component Data](#adding-component-data)
+* [Adding Custom Sections](#adding-custom-sections)
+* [Building The Styleguide](#building-the-styleguide)
+    * [Build Options](#build-options)
+
 ## Set-up Steps
 
 In your application's `package.json`, add the styleguide module to dependencies, e.g.
@@ -105,6 +124,18 @@ These deal with marking up components and the data that goes with them. This is 
 #### css
 This is the name of your CSS file without the extension or the fingerprint. e.g for the file `main-7ea4e129e237c230ca7de77c1b47d2f4.css` you would use `main`. This is used to generate information about your stylesheet, and also in the display of your components.
 
+### Optional Configuration Options
+
 ## Adding Components
 
 The main aim of the Living Styleguide
+
+### Marking Up The Templates
+
+### Adding Component Data
+
+## Adding Custom Sections
+
+## Building The Styleguide
+
+### Build Options
