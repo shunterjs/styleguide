@@ -16,6 +16,21 @@ body {
 	margin: 0;
 	padding: 0;
 }
+body:before {
+	content: 'small';
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+}
+
+@media (min-width: 820px) {
+	body:before {
+		content: 'full';
+	}
+}
 
 /* helpers */
 

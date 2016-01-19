@@ -6,6 +6,7 @@
 	var resizeLimit = 1000 / 41 * 5;
 
 	var $window = $(window);
+	var $body = $('body')[0];
 	var $nav = $('.navigation > div:first-child');
 
 	var initialize = function () {
@@ -35,10 +36,19 @@
 		this.resizeCount = 0;
 	};
 
-	var fixedSidebar = function () {
-		var pos = $window.height() < $nav.outerHeight(true)? 'absolute': 'fixed';
-		$nav.css({position: pos});
+	var fixedSidebar = function (mq) {
+		if (mq() === 'full') {
+			var pos = $window.height() < $nav.outerHeight(true)? 'absolute': 'fixed';
+			$nav.css({position: pos});
+		}
+		else {
+			$nav.removeAttr('style');
+		}
 	};
+
+	var mediaQuery = function () {
+		return window.getComputedStyle($body, ':before').content.replace(/"|'/g, '');
+	}
 
 	Resizer.prototype = {
 		resize: function () {
@@ -62,9 +72,9 @@
 
 	// fix sidebar if shorter than window
 	$window.resize(function () {
-		fixedSidebar();
+		fixedSidebar(mediaQuery);
 	});
-	fixedSidebar();
+	fixedSidebar(mediaQuery);
 
 	// select box navigation
 	$('nav select').change(function() {
