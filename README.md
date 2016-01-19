@@ -308,8 +308,3 @@ This should then be set up to return JSON in the following format:
 	}
 }
 ```
-
-## License
-
-Styleguide is licensed under the [Lesser General Public License (LGPL-3.0)](LICENSE).  
-Copyright &copy; 2016, ShunterJS
