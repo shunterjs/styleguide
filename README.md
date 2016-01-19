@@ -2,6 +2,8 @@
 
 A Living Styleguide Module for your Shunter Application. Mark up components (code snippets) within your templates and render them as a Living Styleguide that will use the assets from your application to always show a guide to the latest version of your website. The module will also use your CSS to auto-generate sections for Typography and Colors.
 
+![Screenshot](http://shunterjs.github.io/styleguide/assets/example.png)
+
 ## Table Of Contents
 
 * [Set-up Steps](#set-up-steps)
@@ -12,7 +14,7 @@ A Living Styleguide Module for your Shunter Application. Mark up components (cod
         * [exclude](#exclude)
         * [include](#include)
         * [components, componentStart, componentEnd, placeholderText](#components-componentstart-componentend-placeholdertext)
-        * [applicationCSS](#applicationCSS)
+        * [applicationCSS](#applicationcss)
 	* [Optional Configuration Options](#optional-configuration-options)
 	    * [styleguideTitle](#styleguidetitle)
 	    * [styleguideDescription](#styleguidedescription)
